@@ -47,5 +47,8 @@ class Estudiante extends Model
         return $this->hasMany('App\Pivote', 'estudiante_id', 'id');
     }
     
+    public function materias(){
+      return $this->belongsToMany('App\Estudiante');
+  }
 
 }
